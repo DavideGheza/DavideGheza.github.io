@@ -9,37 +9,24 @@ redirect_from:
 
 {% include base_path %}
 
+Academic positions
+======
+* **2024 – present**: Staff Scientist, Psychological & Brain Sciences, Washington University in St. Louis (with Wouter Kool)
+* **2020 – 2024**: Postdoctoral Research Associate, Psychological & Brain Sciences, Washington University in St. Louis (with Wouter Kool)
+* **2020**: Postdoctoral Research Associate, Affective Neuroscience and Psychophysiology, University of Göttingen (with Annekathrin Schacht)
+* **2019**: Visiting Doctoral Student, Donders Institute for Brain, Cognition and Behaviour, Nijmegen (with Mike X Cohen & Eliana Vassena)
+
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* **Ph.D.**, Experimental-Clinical and Health Psychology, Ghent University, 2019 (with Gilles Pourtois & Chris Baeken)
+* **M.Sc.**, Neuroscience and Neuropsychological Rehabilitation, University of Padova, 2015 (110/110 cum laude)
+* **B.Sc.**, Psychological Sciences and Techniques, Catholic University of the Sacred Heart, Brescia, 2012
 
-Work experience
+Grants
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
-
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* **2024 – 2026**: McDonnell Center for Systems Neuroscience, Principal Investigator ($100,000). *Decoding the representational content of neural signals of multidimensional conflict (EEG + fMRI).*
+* **2022**: Psychological & Brain Sciences Postdoctoral Fellow Research Grant, Washington University in St. Louis ($2,500)
+* **2019**: Research Foundation – Flanders (FWO), travel grant for a long stay abroad at the Donders Institute (€5,200)
 
 Publications
 ======
@@ -58,7 +45,3 @@ Teaching
   <ul>{% for post in site.teaching reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams

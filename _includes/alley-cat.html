@@ -1,0 +1,100 @@
+<!-- A small gray alley cat walking on the fence. Tribute to Alley Cat (1984). -->
+<style>
+  .ac-yard { position: relative; height: 72px; margin: 0 0 1em; }
+  .ac-fence {
+    position: absolute; left: 0; right: 0; bottom: 0; height: 28px;
+    background:
+      linear-gradient(#b5ad9b, #b5ad9b) 0 8px / 100% 3px no-repeat,
+      repeating-linear-gradient(90deg, #cfc8b8 0 14px, transparent 14px 18px);
+    border-top: 3px solid #b5ad9b;
+  }
+  #ac-cat { position: absolute; bottom: 31px; left: 0; width: 57px; height: 33px; cursor: pointer; shape-rendering: crispEdges; }
+  .ac-bubble {
+    position: absolute; bottom: 70px; max-width: 240px; padding: 6px 10px;
+    font: 12px/1.35 ui-monospace, Menlo, monospace; color: #222;
+    background: #fff; border: 1px solid #ddd; border-radius: 6px;
+    opacity: 0; transition: opacity .2s; pointer-events: none;
+  }
+  .ac-bubble.on { opacity: 1; }
+</style>
+<div class="ac-yard" id="ac-yard">
+  <div class="ac-fence"></div>
+  <svg id="ac-cat" viewBox="0 0 19 11" role="img" aria-label="A small gray alley cat walking on the fence"></svg>
+  <div class="ac-bubble" id="ac-bubble"></div>
+</div>
+<script>
+(function () {
+  var top = [
+    "..............g...g",
+    "..............gg.gg",
+    "..............ggggg",
+    "..g...........gegeg",
+    ".g............ggpgg",
+    ".g.............ggg.",
+    "..g.gggggggggggggg.",
+    "...gggggggggggggg..",
+    "...ddgggggggggggd.."
+  ];
+  var legsA = ["...gg.gg....gg.gg..", "...gg.gg....gg.gg.."];
+  var legsB = ["....gggg....gggg...", "...gg..gg..gg..gg.."];
+  var colors = { g: "#8b8b8b", d: "#666", e: "#d9e25a", p: "#d99a9a" };
+  function draw(rows) {
+    var out = "";
+    rows.forEach(function (row, y) {
+      for (var x = 0; x < row.length; x++) {
+        var c = colors[row[x]];
+        if (c) out += '<rect x="' + x + '" y="' + y + '" width="1" height="1" fill="' + c + '"/>';
+      }
+    });
+    return out;
+  }
+  var frames = [draw(top.concat(legsA)), draw(top.concat(legsB))];
+  var cat = document.getElementById("ac-cat");
+  var yard = document.getElementById("ac-yard");
+  var bubble = document.getElementById("ac-bubble");
+  if (!cat) return;
+  cat.innerHTML = frames[0];
+
+  var lines = [
+    "meow.",
+    "I am a task-irrelevant dimension. Please suppress me.",
+    "Conflict detected. Suppressing in ~250 ms.",
+    "Is chasing this cursor worth the effort? Computing…",
+    "p(meow) = 1",
+    "This cat was not pre-registered.",
+    "Reviewer 2 here. Meow."
+  ];
+  var x = 20, dir = 1, speed = 32, frame = 0, acc = 0, pauseUntil = 0, last = null;
+  var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function place() {
+    cat.style.transform = "translateX(" + x + "px) scaleX(" + dir + ")";
+    bubble.style.left = Math.max(0, Math.min(x - 40, yard.clientWidth - 250)) + "px";
+  }
+  cat.addEventListener("click", function () {
+    bubble.textContent = lines[Math.floor(Math.random() * lines.length)];
+    bubble.classList.add("on");
+    pauseUntil = performance.now() + 2600;
+    cat.innerHTML = frames[0];
+    setTimeout(function () { bubble.classList.remove("on"); }, 2600);
+  });
+  function tick(t) {
+    if (last === null) last = t;
+    var dt = Math.min((t - last) / 1000, 0.1);
+    last = t;
+    if (t > pauseUntil) {
+      var max = yard.clientWidth - 57;
+      x += dir * speed * dt;
+      if (x >= max) { x = max; dir = -1; }
+      if (x <= 0) { x = 0; dir = 1; }
+      acc += dt;
+      if (acc > 0.18) { acc = 0; frame ^= 1; cat.innerHTML = frames[frame]; }
+      if (Math.random() < 0.002) { pauseUntil = t + 1500 + Math.random() * 2500; cat.innerHTML = frames[0]; }
+    }
+    place();
+    requestAnimationFrame(tick);
+  }
+  place();
+  if (!reduce) requestAnimationFrame(tick);
+})();
+</script>

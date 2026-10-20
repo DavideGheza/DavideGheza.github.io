@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Davide Gheza</title>
+<meta name="description" content="Davide Gheza, cognitive neuroscientist at Washington University in St. Louis. Attention, cognitive control, mental effort, EEG and computational models.">
+<style>
+  :root {
+    --bg: #fbfaf7;
+    --fg: #1d1d1b;
+    --muted: #6d6b65;
+    --line: #e5e1d8;
+    --accent: #2f5a96;
+    --fence: #cfc8b8;
+    --fence-dark: #b5ad9b;
+    --bubble: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141414;
+      --fg: #e9e6df;
+      --muted: #9a978f;
+      --line: #2b2a28;
+      --accent: #8fb3e6;
+      --fence: #3b3934;
+      --fence-dark: #2e2c28;
+      --bubble: #232323;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 17px/1.65 ui-serif, "Iowan Old Style", Georgia, serif;
+  }
+  main { max-width: 640px; margin: 0 auto; padding: 72px 16px 24px; }
+  h1 { font-size: 2.1rem; font-weight: 500; margin: 0; letter-spacing: -0.01em; }
+  .role { color: var(--muted); margin: .2rem 0 1.1rem; }
+  .links a { margin-right: 1.1rem; white-space: nowrap; }
+  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; }
+  a:hover { border-bottom-color: currentColor; }
+  h2 {
+    font: 600 .74rem/1 ui-sans-serif, system-ui, sans-serif;
+    text-transform: uppercase; letter-spacing: .14em;
+    color: var(--muted);
+    margin: 3.2rem 0 1.1rem;
+  }
+  p { margin: 0 0 1rem; }
+  .q { margin: 0 0 1.3rem; }
+  .q b { display: block; font-weight: 600; }
+  .q span { color: var(--muted); }
+  ul.pubs { list-style: none; padding: 0; margin: 0; }
+  ul.pubs li { margin: 0 0 1.05rem; }
+  .t { display: block; }
+  .meta { color: var(--muted); font-size: .92rem; }
+  .yr { font-variant-numeric: tabular-nums; }
+  footer { max-width: 640px; margin: 0 auto; padding: 0 16px; }
+  .yard { position: relative; height: 76px; margin-top: 3rem; }
+  .fence {
+    position: absolute; left: 0; right: 0; bottom: 0; height: 30px;
+    background:
+      linear-gradient(var(--fence-dark), var(--fence-dark)) 0 8px / 100% 3px no-repeat,
+      repeating-linear-gradient(90deg, var(--fence) 0 14px, transparent 14px 18px);
+    border-top: 3px solid var(--fence-dark);
+  }
+  #cat {
+    position: absolute; bottom: 33px; left: 0;
+    width: 57px; height: 33px; cursor: pointer;
+    shape-rendering: crispEdges;
+  }
+  .bubble {
+    position: absolute; bottom: 74px;
+    max-width: 230px; padding: 6px 10px;
+    font: 13px/1.35 ui-monospace, Menlo, monospace;
+    background: var(--bubble); color: var(--fg);
+    border: 1px solid var(--line); border-radius: 6px;
+    opacity: 0; transition: opacity .2s; pointer-events: none;
+  }
+  .bubble.on { opacity: 1; }
+  .small { color: var(--muted); font-size: .85rem; padding: 14px 0 40px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Davide Gheza</h1>
+    <p class="role">Cognitive neuroscientist · Staff Scientist, Psychological &amp; Brain Sciences, Washington University in St. Louis</p>
+    <p class="links">
+      <a href="mailto:davide.gheza@gmail.com">Email</a>
+      <a href="https://scholar.google.com/citations?view_op=search_authors&amp;mauthors=Davide+Gheza">Google Scholar</a>
+      <a href="https://github.com/DavideGheza">GitHub</a>
+      <a href="https://osf.io/hxbv5">OSF</a>
+    </p>
+  </header>
+
+  <section>
+    <h2>About</h2>
+    <p>I study how the brain decides where attention goes, and when thinking hard is worth the trouble. I work with Wouter Kool and combine EEG, fMRI and computational models.</p>
+    <p>Before St. Louis I was a postdoc at the University of Göttingen. I did my PhD at Ghent University, with a research stay at the Donders Institute in Nijmegen. I studied psychology and neuroscience in Brescia and Padova.</p>
+  </section>
+
+  <section>
+    <h2>What I'm curious about</h2>
+    <div class="q"><b>How do we ignore many things at once?</b><span>Your phone buzzes, someone talks, a car honks. I built a task where people must ignore three distractions at once. It turns out the brain keeps a separate history for each one and quiets each one on its own.</span></div>
+    <div class="q"><b>Is it worth the effort?</b><span>Thinking is costly, and we often avoid it. I study how the brain weighs effort against reward. One finding: simply getting out of a chore feels like a reward.</span></div>
+    <div class="q"><b>How does the brain check its own work?</b><span>Mistakes and surprises leave fast electrical traces at the front of the brain. I use EEG to follow those signals and to see how they change our behavior on the next try.</span></div>
+    <div class="q"><b>Reading thoughts in brain waves</b><span>With decoding methods I track, millisecond by millisecond, what the brain is representing. That includes the distractions it is trying to push away.</span></div>
+    <div class="q"><b>Building small brains on a computer</b><span>I write neural network and decision models that copy human behavior, then test whether real brains work the same way.</span></div>
+    <div class="q"><b>When motivation runs low</b><span>In depression, learning can be intact while drive is not. I am interested in how motivation and control break down, and in how to measure that.</span></div>
+  </section>
+
+  <section>
+    <h2>Selected publications</h2>
+    <ul class="pubs">
+      <li><a class="t" href="https://doi.org/10.1101/2025.11.16.688701">Reactive suppression of distractor representations resolves multidimensional interference</a>
+        <span class="meta">Gheza, Freund, Zalabak &amp; Kool · <i>bioRxiv</i> preprint · <span class="yr">2025</span></span></li>
+      <li><a class="t" href="https://doi.org/10.1038/s41562-024-02088-z">Distractor-specific control adaptation in multidimensional environments</a>
+        <span class="meta">Gheza &amp; Kool · <i>Nature Human Behaviour</i> · <span class="yr">2025</span></span></li>
+      <li><a class="t" href="https://2024.ccneuro.org/pdf/537_Paper_authored_CCN_MULTI_Gheza_Kool_retitled.pdf">Control adaptation through selective suppression of multidimensional distractors</a>
+        <span class="meta">Gheza, Zalabak &amp; Kool · <i>Cognitive Computational Neuroscience</i> · <span class="yr">2024</span></span></li>
+      <li><a class="t" href="https://doi.org/10.1371/journal.pone.0287954">Need for cognition moderates the relief of avoiding cognitive effort</a>
+        <span class="meta">Gheza, Kool &amp; Pourtois · <i>PLOS ONE</i> · <span class="yr">2023</span></span></li>
+      <li><a class="t" href="https://doi.org/10.3758/s13415-019-00693-4">Abnormal approach-related motivation but spared reinforcement learning in MDD</a>
+        <span class="meta">Gheza, Bakic, Baeken, De Raedt &amp; Pourtois · <i>Cognitive, Affective, &amp; Behavioral Neuroscience</i> · <span class="yr">2019</span></span></li>
+      <li><a class="t" href="https://doi.org/10.1016/j.neuroimage.2018.02.049">Integration of reward with cost anticipation during performance monitoring</a>
+        <span class="meta">Gheza, De Raedt, Baeken &amp; Pourtois · <i>NeuroImage</i> · <span class="yr">2018</span></span></li>
+      <li><a class="t" href="https://doi.org/10.1016/j.ijpsycho.2017.11.013">Dissociable effects of reward and expectancy during evaluative feedback processing</a>
+        <span class="meta">Gheza, Paul &amp; Pourtois · <i>International Journal of Psychophysiology</i> · <span class="yr">2018</span></span></li>
+      <li><a class="t" href="https://doi.org/10.1016/j.neuroimage.2016.10.050">TPJ–M1 interaction in the control of shared representations</a>
+        <span class="meta">Bardi, Gheza &amp; Brass · <i>NeuroImage</i> · <span class="yr">2017</span></span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Teaching</h2>
+    <p>I like making hard methods feel approachable. I have taught EEG time-frequency analysis workshops (Göttingen), a seminar on affective neuroscience (International Max Planck Research School), and co-taught <i>Introduction to Computational Cognitive Science</i> at WashU.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="yard" id="yard">
+    <div class="fence"></div>
+    <svg id="cat" viewBox="0 0 19 11" aria-label="A small gray alley cat walking on the fence" role="img"></svg>
+    <div class="bubble" id="bubble"></div>
+  </div>
+  <p class="small">© 2026 Davide Gheza · No cats were harmed. One was not pre-registered.</p>
+</footer>
+
+<script>
+(function () {
+  // Pixel cat, tribute to Alley Cat (1984). g = gray, d = dark gray, e = eye, p = nose
+  var top = [
+    "..............g...g",
+    "..............gg.gg",
+    "..............ggggg",
+    "..g...........gegeg",
+    ".g............ggpgg",
+    ".g.............ggg.",
+    "..g.gggggggggggggg.",
+    "...gggggggggggggg..",
+    "...ddgggggggggggd.."
+  ];
+  var legsA = ["...gg.gg....gg.gg..", "...gg.gg....gg.gg.."];
+  var legsB = ["....gggg....gggg...", "...gg..gg..gg..gg.."];
+  var colors = { g: "#8b8b8b", d: "#666", e: "#d9e25a", p: "#d99a9a" };
+
+  function draw(rows) {
+    var out = "";
+    rows.forEach(function (row, y) {
+      for (var x = 0; x < row.length; x++) {
+        var c = colors[row[x]];
+        if (c) out += '<rect x="' + x + '" y="' + y + '" width="1" height="1" fill="' + c + '"/>';
+      }
+    });
+    return out;
+  }
+  var frames = [draw(top.concat(legsA)), draw(top.concat(legsB))];
+
+  var cat = document.getElementById("cat");
+  var yard = document.getElementById("yard");
+  var bubble = document.getElementById("bubble");
+  cat.innerHTML = frames[0];
+
+  var lines = [
+    "meow.",
+    "I am a task-irrelevant dimension. Please suppress me.",
+    "Conflict detected. Suppressing in ~250 ms.",
+    "Is chasing this cursor worth the effort? Computing…",
+    "p(meow) = 1",
+    "This cat was not pre-registered.",
+    "Reviewer 2 here. Meow."
+  ];
+
+  var x = 20, dir = 1, speed = 32, frame = 0, acc = 0, pauseUntil = 0, last = null;
+  var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function place() {
+    cat.style.transform = "translateX(" + x + "px) scaleX(" + dir + ")";
+    var bx = Math.min(Math.max(0, x - 40), yard.clientWidth - 240);
+    bubble.style.left = Math.max(0, bx) + "px";
+  }
+
+  cat.addEventListener("click", function () {
+    bubble.textContent = lines[Math.floor(Math.random() * lines.length)];
+    bubble.classList.add("on");
+    pauseUntil = performance.now() + 2600;
+    cat.innerHTML = frames[0];
+    setTimeout(function () { bubble.classList.remove("on"); }, 2600);
+  });
+
+  function tick(t) {
+    if (last === null) last = t;
+    var dt = Math.min((t - last) / 1000, 0.1);
+    last = t;
+    if (t > pauseUntil) {
+      var max = yard.clientWidth - 57;
+      x += dir * speed * dt;
+      if (x >= max) { x = max; dir = -1; }
+      if (x <= 0) { x = 0; dir = 1; }
+      acc += dt;
+      if (acc > 0.18) { acc = 0; frame ^= 1; cat.innerHTML = frames[frame]; }
+      // now and then, the cat sits and stares at nothing
+      if (Math.random() < 0.002) { pauseUntil = t + 1500 + Math.random() * 2500; cat.innerHTML = frames[0]; }
+    }
+    place();
+    requestAnimationFrame(tick);
+  }
+
+  place();
+  if (!reduce) requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>
