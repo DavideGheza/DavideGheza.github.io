@@ -7,34 +7,40 @@ redirect_from:
   - /about.html
 ---
 
-I'm a cognitive neuroscientist and Staff Scientist in the Department of Psychological & Brain Sciences at Washington University in St. Louis, where I work with Wouter Kool. I study how the brain decides where attention goes, and when thinking hard is worth the trouble. I use EEG, fMRI and computational models.
+I'm a cognitive neuroscientist and Staff Scientist in Psychological & Brain Sciences at Washington University in St. Louis, working with Wouter Kool.
+
+My research is about cognitive control: how we allocate attention, monitor our performance, and decide how much effort a task is worth. I think of control as something that emerges from distributed brain dynamics rather than from a single "central agent". I try to explain it by linking computational models to their neural implementation, using EEG, fMRI and computational modeling.
 
 Before St. Louis I was a postdoc at the University of Göttingen. I did my PhD at Ghent University, with a research stay at the Donders Institute in Nijmegen. I studied psychology and neuroscience in Brescia and Padova.
 
-What I'm curious about
+Research interests
 ======
 
 **How do we ignore many things at once?**
-Your phone buzzes, someone talks, a car honks. I built a task where people must ignore three distractions at once. It turns out the brain keeps a separate history for each one and quiets each one on its own.
-
-**Is it worth the effort?**
-Thinking is costly, and we often avoid it. I study how the brain weighs effort against reward. One finding: simply getting out of a chore feels like a reward.
+Most control tasks have one task and one distractor. Real environments have many. With the MULTI paradigm I study how people handle several distractors at once. Adaptation works by suppressing distractors rather than enhancing the target, and it is specific to each distractor's history.
 
 **How does the brain check its own work?**
-Mistakes and surprises leave fast electrical traces at the front of the brain. I use EEG to follow those signals and to see how they change our behavior on the next try.
+After errors, negative feedback or surprises, the medial frontal cortex produces fast signals (feedback- and error-related negativities, theta oscillations). I use EEG to study these signals and how they feed into adaptation on the next trial.
+
+**Is it worth the effort?**
+Control is costly, and we weigh its expected benefits against the cost of exertion. My EEG work showed that avoiding an anticipated effort produces a reward signal, and that people differ in how relieving that is.
 
 **Reading thoughts in brain waves**
 With decoding methods I track, millisecond by millisecond, what the brain is representing. That includes the distractions it is trying to push away.
 
-**Building small brains on a computer**
-I write neural network and decision models that copy human behavior, then test whether real brains work the same way.
+**Neural geometry of conflict**
+I am testing whether conflict and control are encoded as multivariate representations in the dACC and PFC, and whether adaptation changes their geometry.
+
+**Computational models and individual differences**
+I build connectionist and evidence accumulation models of control, and fit them to behavior to measure individual differences. I want to use this to study adhd and depression.
+
 
 **When motivation runs low**
-In depression, learning can be intact while drive is not. I am interested in how motivation and control break down, and in how to measure that.
+In depression, for example, learning can be intact while drive is not. I am interested in how motivation and control break down, and in how to measure that.
 
 Recent highlights
 ======
 
 * **2025**: [Distractor-specific control adaptation in multidimensional environments](https://doi.org/10.1038/s41562-024-02088-z) is out in *Nature Human Behaviour*.
 * **2025**: New preprint: [Reactive suppression of distractor representations resolves multidimensional interference](https://doi.org/10.1101/2025.11.16.688701).
-* **2024–2026**: Principal Investigator on a McDonnell Center for Systems Neuroscience grant to decode neural signals of multidimensional conflict with EEG and fMRI.
+* **2024–2026**: PI on a McDonnell Center for Systems Neuroscience grant on the neural representation of multidimensional conflict (EEG + fMRI).
