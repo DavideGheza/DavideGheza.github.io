@@ -3,7 +3,7 @@ title: 'Distractor-specific control adaptation in multidimensional environments'
 collection: publications
 category: manuscripts
 permalink: /publication/2025-01-03-distractor-specific
-excerpt: 'When several things compete for our attention, the brain does not raise a single alarm. It keeps a separate tally for each distraction.'
+excerpt: 'When several things compete for our attention, the brain keeps track of them independently. Somehow, it stores their own history of interference (a.k.a. how much they bothered you), and adjust how much attention you''ll give to each of them independently.'
 date: 2025-01-03
 venue: 'Nature Human Behaviour'
 paperurl: 'https://doi.org/10.1038/s41562-024-02088-z'
