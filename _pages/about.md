@@ -16,8 +16,8 @@ Before St. Louis I was a postdoc at the University of Göttingen. I did my PhD a
 Research interests
 ======
 
-**How do we ignore many things at once?**
-Most control tasks have one task and one distractor. Real environments have many. With the MULTI paradigm I study how people handle several distractors at once. Adaptation works by suppressing distractors rather than enhancing the target, and it is specific to each distractor's history.
+**How do we deal with many sources of information?**
+Most attention experiments have one target and one distractor. Real environments have many. I built a new paradigm (the MULTI task) to study how people handle several distractors at once. We found that attention adapts mainly by adjusting the distractors, not by 'focusing harder' on the task. This adaptation is specific to each distractor's history.
 
 **How does the brain check its own work?**
 After errors, negative feedback or surprises, the medial frontal cortex produces fast signals (feedback- and error-related negativities, theta oscillations). I use EEG to study these signals and how they feed into adaptation on the next trial.
