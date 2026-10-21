@@ -9,7 +9,7 @@ redirect_from:
 
 I'm a cognitive neuroscientist and Staff Scientist in Psychological & Brain Sciences at Washington University in St. Louis, working with Wouter Kool.
 
-My research is about cognitive control: how we allocate attention, monitor our performance, and decide how much effort a task is worth. I think of control as something that emerges from distributed brain dynamics rather than from a single "central agent". I try to explain it by linking computational models to their neural implementation, using EEG, fMRI and computational modeling.
+My research is about cognitive control: how we allocate attention, monitor our performance, and decide how much effort a task is worth. I think of control as something that emerges from distributed brain dynamics rather than from a single "central agent". I try to explain it by linking computational models to their neural implementation, using behavioral experiments, EEG, and fMRI.
 
 Before St. Louis I was a postdoc at the University of Göttingen. I did my PhD at Ghent University, with a research stay at the Donders Institute in Nijmegen. I studied psychology and neuroscience in Brescia and Padova.
 
