@@ -3,7 +3,7 @@ title: 'Distractor-specific control adaptation in multidimensional environments'
 collection: publications
 category: manuscripts
 permalink: /publication/2025-01-03-distractor-specific
-excerpt: 'When several things compete for our attention, the brain keeps track of them independently. Somehow, it stores their own history of interference (a.k.a. how much they bothered you), and adjust how much attention you''ll give to each of them independently.'
+excerpt: 'When several things compete for our attention, the brain can keep track of them independently. In our task, the brain keeps a separate record of how much each one has interfered in the past (i.e., how much each bothered you), and uses that to decide how much attention to deploy against it next time.'
 date: 2025-01-03
 venue: 'Nature Human Behaviour'
 paperurl: 'https://doi.org/10.1038/s41562-024-02088-z'
