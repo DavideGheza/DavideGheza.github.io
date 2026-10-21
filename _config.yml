@@ -22,9 +22,9 @@ repository               : "DavideGheza/DavideGheza.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile.jpeg"
   name             : "Davide Gheza"
-  pronouns         : "sua maestade"
+  pronouns         : #"sua maestade"
   bio              : "Cognitive neuroscientist. Cognitive control, attention and effort."
   location         : "St. Louis, MO"
   employer         : "Washington University in St. Louis"
