@@ -12,9 +12,6 @@
     --muted: #6d6b65;
     --line: #e5e1d8;
     --accent: #2f5a96;
-    --fence: #cfc8b8;
-    --fence-dark: #b5ad9b;
-    --bubble: #ffffff;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
@@ -23,9 +20,6 @@
       --muted: #9a978f;
       --line: #2b2a28;
       --accent: #8fb3e6;
-      --fence: #3b3934;
-      --fence-dark: #2e2c28;
-      --bubble: #232323;
     }
   }
   * { box-sizing: border-box; }
@@ -58,13 +52,19 @@
   .meta { color: var(--muted); font-size: .92rem; }
   .yr { font-variant-numeric: tabular-nums; }
   footer { max-width: 640px; margin: 0 auto; padding: 0 16px; }
-  .yard { position: relative; height: 76px; margin-top: 3rem; }
+  /* Alley Cat (1984) scene in the CGA palette: black, cyan, magenta, white */
+  .yard { position: relative; height: 100px; margin-top: 3rem; background: #000; overflow: hidden; }
+  .wall {
+    position: absolute; left: 0; right: 0; top: 0; bottom: 30px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='36'%3E%3Crect width='48' height='36' fill='%23FF55FF'/%3E%3Cg fill='%23000'%3E%3Crect y='8' width='48' height='1'/%3E%3Crect y='17' width='48' height='1'/%3E%3Crect y='26' width='48' height='1'/%3E%3Crect y='35' width='48' height='1'/%3E%3Crect x='6' y='0' width='1' height='8'/%3E%3Crect x='40' y='9' width='1' height='8'/%3E%3Crect x='6' y='18' width='1' height='8'/%3E%3Crect x='40' y='27' width='1' height='8'/%3E%3C/g%3E%3Crect x='17' y='4' width='14' height='20' fill='%2355FFFF'/%3E%3Crect x='19' y='6' width='10' height='16' fill='%23000'/%3E%3Crect x='23' y='6' width='2' height='16' fill='%2355FFFF'/%3E%3C/svg%3E") 0 0 / 48px 36px;
+    image-rendering: pixelated;
+  }
   .fence {
     position: absolute; left: 0; right: 0; bottom: 0; height: 30px;
     background:
-      linear-gradient(var(--fence-dark), var(--fence-dark)) 0 8px / 100% 3px no-repeat,
-      repeating-linear-gradient(90deg, var(--fence) 0 14px, transparent 14px 18px);
-    border-top: 3px solid var(--fence-dark);
+      linear-gradient(#55FFFF, #55FFFF) 0 8px / 100% 3px no-repeat,
+      repeating-linear-gradient(90deg, #FFFFFF 0 10px, #000 10px 14px);
+    border-top: 3px solid #FFFFFF;
   }
   #cat {
     position: absolute; bottom: 33px; left: 0;
@@ -72,12 +72,12 @@
     shape-rendering: crispEdges;
   }
   .bubble {
-    position: absolute; bottom: 74px;
-    max-width: 230px; padding: 6px 10px;
+    position: absolute; top: 4px;
+    max-width: 230px; padding: 4px 8px;
     font: 13px/1.35 ui-monospace, Menlo, monospace;
-    background: var(--bubble); color: var(--fg);
-    border: 1px solid var(--line); border-radius: 6px;
-    opacity: 0; transition: opacity .2s; pointer-events: none;
+    background: #000; color: #FFFFFF;
+    border: 2px solid #55FFFF;
+    opacity: 0; pointer-events: none;
   }
   .bubble.on { opacity: 1; }
   .small { color: var(--muted); font-size: .85rem; padding: 14px 0 40px; }
@@ -142,8 +142,9 @@
 
 <footer>
   <div class="yard" id="yard">
+    <div class="wall"></div>
     <div class="fence"></div>
-    <svg id="cat" viewBox="0 0 19 11" aria-label="A small gray alley cat walking on the fence" role="img"></svg>
+    <svg id="cat" viewBox="0 0 19 11" aria-label="A small black alley cat walking on the fence" role="img"></svg>
     <div class="bubble" id="bubble"></div>
   </div>
   <p class="small">© 2026 Davide Gheza · No cats were harmed. One was not pre-registered.</p>
@@ -151,7 +152,7 @@
 
 <script>
 (function () {
-  // Pixel cat, tribute to Alley Cat (1984). g = gray, d = dark gray, e = eye, p = nose
+  // Pixel cat, tribute to Alley Cat (1984). g = body, d = paws, e = eye, p = nose
   var top = [
     "..............g...g",
     "..............gg.gg",
@@ -165,7 +166,7 @@
   ];
   var legsA = ["...gg.gg....gg.gg..", "...gg.gg....gg.gg.."];
   var legsB = ["....gggg....gggg...", "...gg..gg..gg..gg.."];
-  var colors = { g: "#8b8b8b", d: "#666", e: "#d9e25a", p: "#d99a9a" };
+  var colors = { g: "#000", d: "#000", e: "#55FFFF", p: "#FFFFFF" };
 
   function draw(rows) {
     var out = "";

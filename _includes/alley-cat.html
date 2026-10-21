@@ -1,25 +1,31 @@
-<!-- A small gray alley cat walking on the fence. Tribute to Alley Cat (1984). -->
+<!-- A small black alley cat walking on the fence. Tribute to Alley Cat (1984), in the CGA palette: black, cyan, magenta, white. -->
 <style>
-  .ac-yard { position: relative; height: 72px; margin: 0 0 1em; }
+  .ac-yard { position: relative; height: 96px; margin: 0 0 1em; background: #000; overflow: hidden; }
+  .ac-wall {
+    position: absolute; left: 0; right: 0; top: 0; bottom: 28px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='36'%3E%3Crect width='48' height='36' fill='%23FF55FF'/%3E%3Cg fill='%23000'%3E%3Crect y='8' width='48' height='1'/%3E%3Crect y='17' width='48' height='1'/%3E%3Crect y='26' width='48' height='1'/%3E%3Crect y='35' width='48' height='1'/%3E%3Crect x='6' y='0' width='1' height='8'/%3E%3Crect x='40' y='9' width='1' height='8'/%3E%3Crect x='6' y='18' width='1' height='8'/%3E%3Crect x='40' y='27' width='1' height='8'/%3E%3C/g%3E%3Crect x='17' y='4' width='14' height='20' fill='%2355FFFF'/%3E%3Crect x='19' y='6' width='10' height='16' fill='%23000'/%3E%3Crect x='23' y='6' width='2' height='16' fill='%2355FFFF'/%3E%3C/svg%3E") 0 0 / 48px 36px;
+    image-rendering: pixelated;
+  }
   .ac-fence {
     position: absolute; left: 0; right: 0; bottom: 0; height: 28px;
     background:
-      linear-gradient(#b5ad9b, #b5ad9b) 0 8px / 100% 3px no-repeat,
-      repeating-linear-gradient(90deg, #cfc8b8 0 14px, transparent 14px 18px);
-    border-top: 3px solid #b5ad9b;
+      linear-gradient(#55FFFF, #55FFFF) 0 8px / 100% 3px no-repeat,
+      repeating-linear-gradient(90deg, #FFFFFF 0 10px, #000 10px 14px);
+    border-top: 3px solid #FFFFFF;
   }
   #ac-cat { position: absolute; bottom: 31px; left: 0; width: 57px; height: 33px; cursor: pointer; shape-rendering: crispEdges; }
   .ac-bubble {
-    position: absolute; bottom: 70px; max-width: 240px; padding: 6px 10px;
-    font: 12px/1.35 ui-monospace, Menlo, monospace; color: #222;
-    background: #fff; border: 1px solid #ddd; border-radius: 6px;
-    opacity: 0; transition: opacity .2s; pointer-events: none;
+    position: absolute; top: 4px; max-width: 240px; padding: 4px 8px;
+    font: 12px/1.35 ui-monospace, Menlo, monospace; color: #FFFFFF;
+    background: #000; border: 2px solid #55FFFF;
+    opacity: 0; pointer-events: none;
   }
   .ac-bubble.on { opacity: 1; }
 </style>
 <div class="ac-yard" id="ac-yard">
+  <div class="ac-wall"></div>
   <div class="ac-fence"></div>
-  <svg id="ac-cat" viewBox="0 0 19 11" role="img" aria-label="A small gray alley cat walking on the fence"></svg>
+  <svg id="ac-cat" viewBox="0 0 19 11" role="img" aria-label="A small black alley cat walking on the fence"></svg>
   <div class="ac-bubble" id="ac-bubble"></div>
 </div>
 <script>
@@ -37,7 +43,7 @@
   ];
   var legsA = ["...gg.gg....gg.gg..", "...gg.gg....gg.gg.."];
   var legsB = ["....gggg....gggg...", "...gg..gg..gg..gg.."];
-  var colors = { g: "#8b8b8b", d: "#666", e: "#d9e25a", p: "#d99a9a" };
+  var colors = { g: "#000", d: "#000", e: "#55FFFF", p: "#FFFFFF" };
   function draw(rows) {
     var out = "";
     rows.forEach(function (row, y) {
